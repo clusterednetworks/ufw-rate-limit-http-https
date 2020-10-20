@@ -17,3 +17,5 @@ Add these lines to /etc/ufw/before.rules after<br>
 <code>-A ufw-before-input -p tcp --dport 443 -i eth0 -m state --state NEW -m recent --update --seconds 2 --hitcount 20 -j DROP</code><br>
 <code># End Custom UFW by clusterednetworks</code><br>
 
+2. Reload the filewall rules
+<code>sudo ufw reload</code>
