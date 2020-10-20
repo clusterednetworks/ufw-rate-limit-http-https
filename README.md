@@ -5,7 +5,7 @@ Works with Debian 9 / 10 and Ubuntu 18.04 & 20.04
 # Usage
 Add these lines to /etc/ufw/before.rules after<br>
 <code># End required lines</code>
-1. Add these lines</code>
+1. Add these lines</br>
 <code># Start CUSTOM UFW added by clusterednetworks 2020-10-20</code><br>
 <code># Limit to 20 concurrent connections on port 80/443 per IP</code><br>
 <code>-A ufw-before-input -p tcp --syn --dport 80 -m connlimit --connlimit-above 20 -j DROP</code><br>
